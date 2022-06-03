@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Chat Room</title>
+  <style>
+
+  </style>
 </head>
 
 <body>
@@ -24,6 +27,8 @@
 
     chatSocket.onmessage = function (e) {
       const data = JSON.parse(e.data);
+      // add div
+      const chatLog = document.getElementById('chat-log');
       document.querySelector('#chat-log').value += (data.message + '\n');
     };
 
